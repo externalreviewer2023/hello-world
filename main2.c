@@ -6,8 +6,6 @@
 #include "palindrome.h" 
 #include "removevowel.h" 
 /*************************************************/ 
-
->>>>>>> remove-vowels-unicode-support
 int main() 
 { 
    FILE *fp;

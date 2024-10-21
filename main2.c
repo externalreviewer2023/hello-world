@@ -8,8 +8,9 @@
 /*************************************************/ 
 int main() 
 { 
-   FILE *fp;
+   FILE *fp, *fp_orig;
    fp = fopen("novowels.txt","w+");
+   fp_orig = fopen("originaltext.txt","w+");
    setlocale(LC_ALL, "");
    wchar_t novowelsStr[] = L"Θα βγάλω όλα τα φωνήεντα από αυτή την συμβολοσειρά.";
    wchar_t originalString[256];   
@@ -19,7 +20,9 @@ int main()
    removevowel(novowelsStr);
    wprintf(L"removevowel (\"%ls\") = %ls \n",originalString, novowelsStr );
    fwprintf(fp, novowelsStr);
+   fwprintf(fp_orig, originalString);
    fclose(fp);
+   fclose(fp_orig);
    return 0; 
 }
 
